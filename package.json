@@ -1,0 +1,34 @@
+{
+  "name": "tsx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"nodemon --experimental-specifier-resolution=node index.js\" \"npm run swagger\"",
+    "swagger": "node --experimental-specifier-resolution=node src/common/configs/swagger-setup.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "concurrently": "^9.2.0",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.1.10",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.5",
+    "nodemailer": "^7.0.5",
+    "zod": "^4.0.13"
+  }
+}
