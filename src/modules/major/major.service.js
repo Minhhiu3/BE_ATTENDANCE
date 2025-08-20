@@ -42,10 +42,10 @@ export const getMajorByIdService = async (id) => {
     return await Major.findOne({ _id: id, deletedAt: null});
 };
 
-export const updateMajorService = async (id,data) => {
+export const updateMajorService = async (id,majorData) => {
     const majorUpdate = await Major.findOneAndUpdate(
         {_id: id,deletedAt:null},
-        {$set: data},
+        {$set: majorData},
         {new: true, runValidators: true}
     );
     return majorUpdate;

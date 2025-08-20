@@ -43,10 +43,10 @@ export const getSubjectByIdService = async (id) => {
     return await Subject.findOne({ _id: id, deletedAt: null});
 };
 
-export const updateSubjectService = async (id,data) => {
+export const updateSubjectService = async (id,subjectData) => {
     const subjectUpdate = await Subject.findOneAndUpdate(
         {_id: id,deletedAt:null},
-        {$set: data},
+        {$set: subjectData},
         {new: true, runValidators: true}
     );
     return subjectUpdate;

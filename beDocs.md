@@ -28,3 +28,47 @@ POST: gửi req lên api
 PUT: sửa toàn bộ record
 PATCH: sửa 1 trường của record
 DELETE: xóa
+
+[] → Mảng (array) hoặc truy cập phần tử mảng/thuộc tính object.
+
+{} → Object hoặc khối lệnh.
+
+'',"",`` → string
+
+data test:
+user:
+{
+  "fullname": "chu duc tu1",
+  "email": "cdt1@gmail.com",
+  "password": "Abcd1234!@"
+}
+
+major:
+{
+  "name": "Toán học",
+  "description": "Bộ môn toán học."
+}
+
+subject:
+{
+  "name": "Toán học 1",
+  "englishName": "math 1",
+  "description": "Toán học cơ bản"
+}
+
+class:
+  {
+    "subjectId": "68949d7159b05e8826ade3be",
+    "majorId": "68949888f5d72ddb9d20998b",
+    "name": "MATH1",
+    "teacherId": "68949768f5d72ddb9d20997b",
+    "studentIds": ["6894978cf5d72ddb9d209983","68949796f5d72ddb9d209987"],
+    "startDate": "2025-08-08",
+    "totalSessions": 100,
+    "shift": "1",
+    "room": "Online",
+    "description": "mo ta cho lop",
+    "maxStudents": 100,
+    "daysOfWeek": [1,3,5]
+}
+

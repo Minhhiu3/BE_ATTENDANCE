@@ -56,7 +56,7 @@ const classSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
-    dayOfWeek: {
+    daysOfWeek: {
       type: Date,
       required: true,
     },
@@ -85,5 +85,5 @@ const classSchema = new mongoose.Schema(
     ],
   },
 );
-
-export default mongoose.model("Class", classSchema);
+const Class = mongoose.model("Class",classSchema);
+export default Class;

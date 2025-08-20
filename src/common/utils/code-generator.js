@@ -69,7 +69,7 @@ export const generateStudentId = async () => {
 
     //tim so thu tu lon nhat va +1
     const maxSequence = Math.max(...sequenceNumbers);
-    const nextSequence = maxSequence ++;
+    const nextSequence = maxSequence + 1;
 
     // neu stt vuot qua 999
     if (nextSequence > 999) {

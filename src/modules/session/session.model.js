@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { RoomEnum, ShiftEnum } from "../../common/constants/enum";
 
 const sessionSchema = new mongoose.Schema(
   {
@@ -12,18 +11,9 @@ const sessionSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
-    shift: {
-      type: String,
-      enum: Object.values(ShiftEnum),
-      required: true,
-    },
     note: {
       type: String,
-    },
-    room: {
-      type: String,
-      enum: Object.values(RoomEnum),
-      required: true,
+      default: "",
     },
   },
   {
