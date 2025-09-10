@@ -7,7 +7,7 @@ export const hashPassword = async (password) => {
 };
 
 export const comparePassword = async (password, hash) => {
-    return bcrypt.compareSync(password, hash);
+  return bcrypt.compareSync(password, hash);
 };
 
 export const randomPassword = (length = 8) => {

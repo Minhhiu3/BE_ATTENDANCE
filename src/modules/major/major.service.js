@@ -1,4 +1,3 @@
-import { date, string, success } from "zod";
 import Major from "./major.model.js";
 import { createError } from "../../common/utils/create-error.js";
 import { MAJORMESSAGE } from "./major.message.js";
@@ -28,7 +27,7 @@ export const createMajorService = async (majorData) => {
     };
 };
 
-export const getAllMajorsService = async (query) => {
+export const getAllMajorsService = async (query = {}) => {
     const { includeDeleted = false, ...queryParams } = query;
     const dataService = await queryBuilder(Major, {
         ...queryParams,
@@ -54,7 +53,7 @@ export const updateMajorService = async (id,majorData) => {
 export const softDeleteMajorService = async (id) => {
     return await Major.findByIdAndUpdate(
         {_id: id,deletedAt: { $ne: new Date() }},
-        {$set: {deletedAt: null}},
+        {$set: {deletedAt: new Date()}},
         {new: true}
     );
 };

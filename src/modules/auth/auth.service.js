@@ -1,7 +1,7 @@
 //service quan li thao tac voi db 
 import { createError } from "../../common/utils/create-error.js";
 import User from "../user/user.model.js";
-import {hashPassword} from '../../common/utils/handler-password.js'
+import {hashPassword, comparePassword} from '../../common/utils/handler-password.js'
 import { generateStudentId, generateUsername } from "../../common/utils/code-generator.js";
 import jwt from "jsonwebtoken";
 import { AUTHMESSAGE } from "./auth.message.js";

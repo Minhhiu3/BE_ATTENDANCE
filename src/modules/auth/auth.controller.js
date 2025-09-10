@@ -13,7 +13,9 @@ export const registerUser = handleAsync(async (req,res,next) => {
 // @route   POST /api/auth/login
 export const loginUser = handleAsync(async (req,res,next) => {
     const loginData = await loginService(req.body);
-    return createResponse(res,200,AUTHMESSAGE.LOGIN_SUCCESS,data);
+    console.log(loginData,"loginData" );
+    
+    return createResponse(res,200,AUTHMESSAGE.LOGIN_SUCCESS,loginData);
 })
 
 // * @route POST /api/auth/refresh-token
